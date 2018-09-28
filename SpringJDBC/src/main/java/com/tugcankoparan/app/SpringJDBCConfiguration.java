@@ -10,8 +10,8 @@ public class SpringJDBCConfiguration {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("org.h2.Driver");
-		dataSource.setUrl("jdbc:h2:tcp://localhost/~/test");
+		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/testdb?useSSL=false");
 		dataSource.setUsername("****");
 		dataSource.setPassword("****");
 		return dataSource;
